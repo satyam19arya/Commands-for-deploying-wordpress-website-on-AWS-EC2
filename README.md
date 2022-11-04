@@ -1,40 +1,6 @@
 # Commands-for-deploying-wordpress-website-on-AWS-EC2
 
-1. Install Apache server on Ubuntu
-sudo apt install apache2
+# Install MobaXterm to run all commands
+MobaXterm is your ultimate toolbox for remote computing. In a single Windows application, it provides loads of functions that are tailored for programmers, webmasters, IT administrators and pretty much all users who need to handle their remote jobs in a more simple fashion.
 
-2. Install php runtime and php mysql connector
-sudo apt install php libapache2-mod-php php-mysql
-
-3. Install MySQL server
-sudo apt install mysql-server 
-
-4. Login to MySQL server
-sudo mysql -u root
-
-5. Change authentication plugin to mysql_native_password (change the password to something strong)
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'Testpassword@123';
-
-6. Create a new database user for wordpress (change the password to something strong)
-CREATE USER 'wp_user'@localhost IDENTIFIED BY 'Testpassword@123';
-
-7. Create a database for wordpress
-CREATE DATABASE wp;
-
-8. Grant all privilges on the database 'wp' to the newly created user
-GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost;
-
-9. Download wordpress
-cd /tmp
-wget https://wordpress.org/latest.tar.gz
-
-10. Unzip
-tar -xvf latest.tar.gz
-
-11. Move wordpress folder to apache document root
-sudo mv wordpress/ /var/www/html
-
-12. Command to restart/reload apache server
-sudo systemctl restart apache2
-OR
-sudo systemctl reload apache2
+MobaXterm provides all the important remote network tools (SSH, X11, RDP, VNC, FTP, MOSH, ...) and Unix commands (bash, ls, cat, sed, grep, awk, rsync, ...) to Windows desktop, in a single portable exe file which works out of the box.
